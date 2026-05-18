@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Rebrand portal sidebar -->
+    <template id="portal_record_sidebar_debranding" inherit_id="portal.portal_record_sidebar" name="Havano Portal Branding" priority="20">
+        <xpath expr="//div/div[hasclass('text-muted')]" position="replace">
+            <div class="o_portal_sidebar_content d-lg-inline-block mb-4 mb-lg-0 p-3 p-lg-0" id="sidebar_content">
+                <!-- Havano branded content - no Odoo references -->
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Remove portal connect button -->
+    <template id="remove_portal_button" inherit_id="sale.sale_order_portal_template">
+        <xpath expr="//button[@id='portal_connect_software_modal_btn']" position="replace">
+        </xpath>
+    </template>
+</odoo>

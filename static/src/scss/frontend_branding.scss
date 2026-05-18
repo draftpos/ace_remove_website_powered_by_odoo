@@ -1,0 +1,16 @@
+// Havano Branding Styles
+.havano-branding {
+    .footer-powered {
+        display: none;
+    }
+}
+
+// Replace Odoo text with Havano
+.oe_footer .o_footer_copyright a {
+    &:contains("Odoo") {
+        display: none;
+        &::after {
+            content: "Havano";
+        }
+    }
+}
