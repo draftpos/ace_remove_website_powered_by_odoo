@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <!-- Create Havano Logo Attachment -->
+        <record id="havano_logo_attachment" model="ir.attachment">
+            <field name="name">havano_logo.png</field>
+            <field name="datas" type="base64" file="ace_remove_website_powered_by_odoo/static/description/havano_logo.png"/>
+            <field name="res_model">res.company</field>
+            <field name="mimetype">image/png</field>
+        </record>
+        
+        <!-- Update System Parameter for Company Name -->
+        <function model="ir.config_parameter" name="set_param">
+            <value>web.base.name</value>
+            <value>Havano</value>
+        </function>
+    </data>
+</odoo>

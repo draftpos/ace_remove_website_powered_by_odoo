@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="brand_promotion_message_remove" inherit_id="web.brand_promotion_message" name="Havano Branding" priority="20">
+        <xpath expr="//t[@t-out]" position="replace">
+            <t t-out="'Powered by Havano'"/>
+        </xpath>
+    </template>
+</odoo>

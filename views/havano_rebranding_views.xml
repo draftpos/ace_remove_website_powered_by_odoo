@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_havano_rebranding_wizard_form" model="ir.ui.view">
+        <field name="name">havano.rebranding.wizard.form</field>
+        <field name="model">havano.rebranding</field>
+        <field name="arch" type="xml">
+            <form string="Havano Rebranding Tools" create="0" edit="0" delete="0">
+                <group>
+                    <div class="o_form_label">Run rebranding utilities on demand.</div>
+                </group>
+                <footer>
+                    <button name="action_auto_rebrand" type="object" string="Seed Havano Branding" class="btn-primary"/>
+                    <button string="Close" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_havano_rebranding_wizard" model="ir.actions.act_window">
+        <field name="name">Havano Rebranding</field>
+        <field name="res_model">havano.rebranding</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_havano_rebranding_wizard_form"/>
+        <field name="target">new</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem
+        id="menu_havano_rebranding_tools"
+        name="Havano Rebranding"
+        parent="base.menu_administration"
+        action="action_havano_rebranding_wizard"
+        sequence="100"
+        groups="base.group_system"
+    />
+</odoo>

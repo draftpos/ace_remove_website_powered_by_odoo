@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Hard-code website footer copyright to Havano (no manual edit mode required). -->
+  <template id="footer_copyright_havano"
+            inherit_id="website.footer_copyright_company_name"
+            name="Havano Footer Copyright"
+            priority="99">
+    <xpath expr="//span[hasclass('o_footer_copyright_name')]" position="replace">
+      <span class="o_footer_copyright_name me-2 small">Copyright © Havano</span>
+    </xpath>
+  </template>
+</odoo>

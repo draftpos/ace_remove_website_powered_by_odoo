@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_havano_branding" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.havano.branding</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='general_settings']" position="inside">
+                <block title="Havano Branding" name="havano_branding_setting">
+                    <setting id="havano_seed_branding_setting"
+                             string="Seed Havano Branding"
+                             help="Apply Havano logos, favicon, website social image, footer copyright, and report branding across the system.">
+                        <div class="mt-2">
+                            <button name="action_seed_havano_branding"
+                                    type="object"
+                                    string="Seed Havano Branding"
+                                    class="btn-primary"
+                                    icon="fa-magic"/>
+                        </div>
+                        <div class="text-muted mt-2">
+                            Runs automatically when the de-branding module is installed.
+                            Use this button to re-apply branding after changing logo files.
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>
